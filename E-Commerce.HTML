@@ -1,0 +1,219 @@
+<html>
+
+    <head>
+        <title>Online Shopping Site for Men and Women</title>
+        <style>
+            /* General Styles */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            header {
+                background-color: rgb(3, 46, 48);
+                color: #fff;
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .products {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .product {
+                display: inline-block;
+                background: #fff;
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                width: 200px;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s;
+            }
+
+            .product:hover {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .product img {
+                max-width: 100%;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .product h3 {
+                margin: 10px 0 5px;
+            }
+
+            .product p {
+                color: #888;
+                margin-bottom: 10px;
+            }
+
+            .product button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .product button:hover {
+                background-color: #218838;
+            }
+
+            /* Feedback Form */
+            .hidden {
+                display: none;
+            }
+
+            .form-container {
+                max-width: 400px;
+                margin: 2rem auto;
+                padding: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+            }
+
+            form label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+
+            form input, form textarea, form button {
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            form button {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+            form button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Home Page -->
+        <div id="home-page">
+            <header>
+                <h1>Style Beyond Basics</h1>
+                <p>Your one-stop shop for everything!</p>
+            </header>
+            <main>
+                <div class="container">
+                    <h2>Featured Products</h2>
+                    <section class="products">
+                        <div class="product">
+                            <img src="https://cdn.sanity.io/images/c1chvb1i/production/6bd8be77b6579f9a1431eeb13cba7bd88b07f93c-1140x800.png/image.png" alt="Stylish shoes" onclick="openFeedbackPage();">
+                            <h3>Product 1</h3>
+                            <p>$2500.00</p>
+                            <button>Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="https://3.kixify.com/sites/default/files/imagecache/product_full/product/2022/09/12/p_34311726_197949439_4881556.jpg" alt="Sneakers" onclick="openFeedbackPage();">
+                            <h3>Product 2</h3>
+                            <p>$3000.00</p>
+                            <button>Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="https://media.gucci.com/style/DarkGray_Center_0_0_2400x2400/1442051112/409154_A7M0T_1000_001_068_0000_Light-GG-Marmont-leather-shoulder-bag.jpg" width="200" onclick="openFeedbackPage();">
+                         <h3>Product 3</h3>
+                         <p>$350.00</p>
+                         <button>Add to Cart</button>
+                         </div>
+                        <div class="product">
+                          <img src="https://th.bing.com/th/id/OIP.x7W4qWebGgGgFBCoOda3hwAAAA?rs=1&pid=ImgDetMain" width="200" onclick="openFeedbackPage();">
+                          <h3>Product 4</h3>
+                          <p>$350.00</p>
+                          <button>Add to Cart</button>
+                          </div>
+                          <div class="product">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81lLBN5W3iL._AC_UL1500_.jpg" width="200" onclick="openFeedbackPage();">
+                            <h3>Product 5</h3>
+                            <p>$9000.00</p>
+                            <button>Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="https://th.bing.com/th/id/OIP.-7UgY1MBghNm1MEGI0XVQgHaHa?rs=1&pid=ImgDetMain" width="200" onclick="openFeedbackPage();">
+                                <h3>Product 6</h3>
+                                <p>$9000.00</p>
+                                <button>Add to </button>
+                                </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <!-- Feedback Page -->
+        <div id="feedback-page" class="hidden">
+            <header>
+                <h1>Feedback Form</h1>
+            </header>
+            <main>
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="feedback">Feedback:</label>
+                        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+                        <button type="submit" onclick="goBackHome()">Submit</button>
+                    </form>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; 2024 Online Shopping</p>
+            </footer>
+        </div>
+
+        <script>
+            // Function to open the feedback page
+            function openFeedbackPage() {
+                document.getElementById('home-page').classList.add('hidden');
+                document.getElementById('feedback-page').classList.remove('hidden');
+            }
+
+            // Function to return to the home page
+            function goBackHome() {
+                document.getElementById('feedback-page').classList.add('hidden');
+                document.getElementById('home-page').classList.remove('hidden');
+            }
+        </script>
+    </body>
+</html>
